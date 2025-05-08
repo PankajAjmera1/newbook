@@ -1,0 +1,4 @@
+package com.example.showservice.exception;
+
+public class InvalidSeatCountException {
+}

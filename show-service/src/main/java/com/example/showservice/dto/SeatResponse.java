@@ -1,0 +1,19 @@
+package com.example.showservice.dto;
+
+import lombok.Data;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SeatResponse {
+    private Long seatId;
+    private String seatNumber;
+    private String type; // Changed from SeatType to String
+    private Double price;
+    private boolean isBooked;
+    private Long showId;
+}

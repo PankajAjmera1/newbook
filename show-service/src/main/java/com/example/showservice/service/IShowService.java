@@ -1,0 +1,22 @@
+package com.example.showservice.service;
+
+import com.example.showservice.dto.ShowRequest;
+import com.example.showservice.dto.ShowResponse;
+import com.example.showservice.entities.Seat;
+import com.example.showservice.entities.Show;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+public interface IShowService {
+
+    public ShowResponse createShow(ShowRequest request);
+    public List<Seat> createSeatsForShow(Show show, int seatsCount);
+    public void validateNoConflictingShows(Long theaterId, LocalDateTime start, LocalDateTime end) ;
+
+    ShowResponse getShowById(Long id);
+    List<ShowResponse> getShowsByTheater(Long theaterId);
+    List<ShowResponse> getShowsByMovie(Long movieId);
+    public List<ShowResponse> getUpcomingShows(int daysAhead);
+    void bookSeats(Long showId, List<String> seatNumbers);
+;}

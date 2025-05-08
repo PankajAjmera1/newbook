@@ -1,0 +1,18 @@
+package com.example.movieservice.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDate;
+
+@Builder
+@Data
+public class MovieWithTheaterResponse {
+    private Long movieId;
+    private String movieName;
+    private String language;
+    private String genre;
+    private String description;
+    private LocalDate releaseDate;
+    private TheaterResponse theaterResponse; // Full theater info
+}

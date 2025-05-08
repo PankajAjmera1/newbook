@@ -1,0 +1,16 @@
+package com.example.movieservice.dto;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class TheaterResponse {
+    private Long theaterId;
+    private String name;
+    private String location;
+    private int capacity;
+}

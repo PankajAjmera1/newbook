@@ -1,0 +1,13 @@
+package com.example.theaterservice.feign;
+
+import com.example.theaterservice.dto.MovieResponse;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@FeignClient(name = "movie-service", url = "${movie.service.url}")
+public interface MovieFeignClient {
+
+    @GetMapping("/api/movies/{movieId}")
+    MovieResponse getMovieById(@PathVariable Long movieId);
+}
